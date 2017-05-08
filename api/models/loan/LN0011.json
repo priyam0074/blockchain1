@@ -1,0 +1,80 @@
+{
+  "id": "LN0011",
+  "loanAmount": "200000",
+  "useOfLoanProceeds": {"id":"3","name":"Reason 3 Value"},
+  "rateOfInterest": "4.25%",
+  "spread": "Spread",
+  "status":"pendingApproval",
+  "collateralValue": 24523,
+  "collateralAccounts": [
+    {
+      "id": "1",
+      "name": "Collateral Account 1"
+    },
+    {
+      "id": "2",
+      "name": "Collateral Account 2"
+    },
+    {
+      "id": "3",
+      "name": "Collateral Account 3"
+    }
+  ],
+  "collateralPositions": [
+    {
+      "id": 11,
+      "securityName": "Microsoft Corp",
+      "cusip": "6577",
+      "quantity": "123",
+      "price": "213",
+      "mv": "2133",
+      "collateralValue": "2000"
+    },
+    {
+      "id": 18,
+      "securityName": "Goldman Sachs",
+      "cusip": "6927",
+      "quantity": "323",
+      "price": "113",
+      "mv": "3533",
+      "collateralValue": "1000"
+    },
+    {
+      "id": 32,
+      "securityName": "Sony",
+      "cusip": "1233",
+      "quantity": "567",
+      "price": "454",
+      "mv": "5646",
+      "collateralValue": "2000"
+    },
+    {
+      "id": 43,
+      "securityName": "Apple Inc",
+      "cusip": "8762",
+      "quantity": "314",
+      "price": "342",
+      "mv": "7688",
+      "collateralValue": "1000"
+    },
+    {
+      "id": 31,
+      "securityName": "Google Inc",
+      "cusip": "32424",
+      "quantity": "43",
+      "price": "133",
+      "mv": "3453",
+      "collateralValue": "1000"
+    }
+  ],
+  "borrower": {
+    "firstName": "Sumit",
+    "middleName": "Kumar",
+    "lastName": "Rajra",
+    "emailId": "kumar.sumit818@gmail.com",
+    "phone": "9599221553"
+  },
+  "custodian": {},
+  "broker": {},
+  "libor": "1 month Libor"
+}

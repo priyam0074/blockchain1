@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <div class="panel panel-primary">
+               <div class="panel-heading">
+                  <h3 class="panel-title">Loan Listing</h3>
+               </div>
+               <div class="panel-body app-panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Loan Number</th>
+                                    <th>Loan Status</th>
+                                    <th>Outstanding</th>
+                                    <th>Amt. Avl To Borrow</th>
+                                    <!-- <th>Margin Call Amt.</th>
+                                    <th>Margin Call Due Date</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="loan in $ctrl.loanList" ng-class="{'danger': (!loan.isActive && loan.status ==='approved')}">
+                                    <td><a id="link-3" ng-click="$ctrl.navigateToLoanDetails(loan.id)">{{loan.id}}</a></td>
+                                    <td>
+                                      <span>{{ (!loan.isActive && loan.status =='approved') ? 'Frozen' : loan.status }}</span>
+                                    </td>
+                                    <td>{{loan.outstanding}}</td>
+                                    <td>
+                                      <span>{{ (!loan.isActive && loan.status =='approved') ? 'NA' : loan.amountAvailableToBorrow }}</span>
+                                    </td>
+                                    <!-- <td>{{loan.marginCallAmount}}</td>
+                                    <td>{{loan.marginCallDueDate}}</td> -->
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+               </div>
+            </div>                     
+        </div>
+       <div class="col-sm-12 col-xs-12 col-md-12 col-lg-6">
+            <div class="panel panel-primary">
+               <div class="panel-heading">
+                  <h3 class="panel-title">Lorem Ipsum</h3>
+               </div>
+               <div class="panel-body app-panel-body">
+                 <div class="row">
+                  <div class="col-sm-6">
+                   <div class="list-group">
+                      <a class="list-group-item " ng-click ="$ctrl.addRow()"><i class="fa fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp; custodian Security</a>
+              </div>
+              </div>
+            </div>
+            </br>
+            </br>
+            </br>
+            </br>
+               <div class="row">
+                  <div class="col-sm-12 table-responsive" >
+                    <table  class= "table table-hover table-striped table-bordered"  ng-if = "$ctrl.inserted !== undefined">
+                      <thead class="bg-info">
+                        <tr>
+                             <th style= "width:30px;"> {{$ctrl.heading.security}}</th>
+                             <th>{{$ctrl.heading.securityName}}</th>
+                             <th>{{$ctrl.heading.PRICE}}</th>
+                             <th>{{$ctrl.heading.NEW}}</th>
+                             <th>{{$ctrl.heading.action}}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="row in $ctrl.addedRows track by $index " >
+                             <td > <select ng-model="row.dropdownValue" ng-options="item for item in row.dropdownValues" ng-change = "$ctrl.filterSecId(row)" >
+                                        <option title="---Select Query---" value="">{{$ctrl.heading.none}}</option>
+                                 </select>
+                             </td>
+                             <td>{{row.security}}</td>
+                             <td>{{row.PRICE}}</td>
+                             <td>
+                             <input type="text" ng-model="row.newprice" ng-disabled="row.editPrice"  autofocus/>
+                             </td>
+                             <td><button class="btn btn-danger" ng-click="$ctrl.Delete(row)">{{$ctrl.heading.delete}}</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                          <div class="row">
+                              <div class="col-sm-offset-10 col-sm-2">
+                                   <button class="btn btn-success" ng-if ="$ctrl.updatePrice" ng-disabled ="" ng-click="$ctrl.Update()">{{$ctrl.heading.update}}</button>
+                              </div>
+                           </div>   
+               </div>
+            </div>           
+        </div> 
+    </div>
+</div>
+
+
+
+

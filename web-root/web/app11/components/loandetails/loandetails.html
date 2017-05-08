@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="alert alert-success" ng-if="$ctrl.successFlag" id="form-message">
+        <!-- <strong>Congratulations !</strong> Loan with ID {{$ctrl.loan.id}} has been saved successfully for borrower with ID as {{$ctrl.loan.borrowerId}}. Click on send to consent button to proceed. -->
+        {{$ctrl.successMsg.value}}
+    </div>
+     <div class="alert alert-danger" ng-if="$ctrl.withdrawErrorMsg" id="form-message">
+        <!-- <strong>Congratulations !</strong> Loan with ID {{$ctrl.loan.id}} has been saved successfully for borrower with ID as {{$ctrl.loan.borrowerId}}. Click on send to consent button to proceed. -->
+        {{$ctrl.successMsg.value}}
+    </div>
+</div>
+<div class="row">
+    <div class="alert alert-danger" id="form-message" ng-if="$ctrl.errorFlag" ng-class="{ 'fade-form-submission-msg':$ctrl.successFlag}">
+        <strong>Sorry!</strong> Error occured while saving draft
+    </div>
+</div>
+<uib-accordion close-others="oneAtATime">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <uib-accordion close-others="$ctrl.closeOtherAccordian">
+                <div uib-accordion-group class="panel-primary" is-open="$ctrl.openLoanInfoSection">
+                    <uib-accordion-heading ng-click="$ctrl.openLoanInfoSection=!$ctrl.openLoanInfoSection"> Loan Info <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': $ctrl.openLoanInfoSection, 'glyphicon-chevron-right': !$ctrl.openLoanInfoSection}"></i>
+                    </uib-accordion-heading>
+                    <loan-info use-of-loan-proceeds="$ctrl.useOfLoanProceeds" open-collateral-accordian="$ctrl.expandCollateralInfo()" loan-info="$ctrl.loan" 
+                    is-existing-borrower="$ctrl.isExistingBorrower"
+                    loan-status="$ctrl.loanStatus"
+                    collateral-account-list="$ctrl.collateralAccountList"
+                    get-existing-borrower-details="$ctrl.getExistingBorrowerDetails()"
+                    prev-path="$ctrl.previousRoute"  show-rate-section="$ctrl.showRateSection" is-loan-info-save-and-continue="$ctrl.isLoanInfoSaveAndContinue" is-input-controls="$ctrl.isInputControls"></loan-info>
+                </div>
+            </uib-accordion>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div uib-accordion-group class="panel-primary" is-open="$ctrl.openCollateralInfoSection" is-disabled="$ctrl.disableCollateralInfoSection" ng-class="{'collateral-heading': !$ctrl.openCollateralInfoSection,'text-muted':false}">
+                <uib-accordion-heading ng-click="$ctrl.openCollateralInfoSection=!$ctrl.openCollateralInfoSection">
+                    <span ng-class="{'collateral-heading': !$ctrl.openCollateralInfoSection}">Collateral Info</span>
+                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': $ctrl.openCollateralInfoSection, 'glyphicon-chevron-right': !$ctrl.openCollateralInfoSection,'collateral-heading': !$ctrl.openCollateralInfoSection}"></i>
+                </uib-accordion-heading>
+                <collateral-info ng-if="$ctrl.openCollateralInfoSection" save-loan="$ctrl.saveLoan()" loan="$ctrl.loan" enable-form-submission-btn="$ctrl.enableLoanSubmissionButton()" is-calculate-collateral="$ctrl.isCalculateCollateral" is-input-controls="$ctrl.isInputControls" ></collateral-info>
+            </div>
+        </div>
+    </div>
+</uib-accordion>
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <hr>
+        <div class="pull-right">
+            <button class="btn btn-success" ng-disabled="$ctrl.disableDraftButton" ng-if="$ctrl.isSaveDraft" ng-click="$ctrl.saveLoan()">Save as Draft</button>
+            <button class="btn btn-danger" ng-disabled="$ctrl.disableConsentButton" ng-if="$ctrl.isSendConsent" ng-click="$ctrl.sendConsent()">Send for Consent</button>
+            <button class="btn btn-success"  ng-if="$ctrl.isApprove" ng-click="$ctrl.approveLoan()">Approve</button>
+            <button class="btn btn-success"  ng-if="!$ctrl.isAcknowledge" ng-click="$ctrl.acknowledgeLoan()">Acknowledge</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+<form name="myForm">
+<div class="col-sm-3 col-sm-offset-1">
+    <div class="form-inline " ng-if="$ctrl.isWithdrawn">
+        <label for="withdrawn ">Withdrawn</label>
+        
+        <input type="text" placeholder="enter amount to be withdrawn" ng-model="$ctrl.abc" class="form-control " name="withdrawn" ng-pattern="/^[0-9]*\.?[0-9]+$/" />
+        <div class="text-danger"  ng-show="myForm.withdrawn.$error.pattern">
+                    Not a valid </div>
+        <div class="text-danger" ng-if="$ctrl.outstanding < $ctrl.abc "> no sufficient amount to withdraw</div> 
+        
+    </div>
+</div>
+
+<div class="col-sm-2" style="margin-left: -84px;">
+<button class="btn btn-success" ng-disabled="myForm.withdrawn.$error.pattern"  ng-click="$ctrl.getWithdrawlAmount()">withdrawn</button>
+</div>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>

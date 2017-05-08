@@ -1,0 +1,20 @@
+{
+  "useOfLoanProceeds": [
+    {
+      "id": "1",
+      "name": "Reason 1 Value"
+    },
+    {
+      "id": "2",
+      "name": "Reason 2 Value"
+    },
+    {
+      "id": "3",
+      "name": "Reason 3 Value"
+    },
+    {
+      "id": "4",
+      "name": "Reason 4 Value"
+    }
+  ]
+}

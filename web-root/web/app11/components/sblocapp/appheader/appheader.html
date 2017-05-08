@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#appnavbar" ng-if="$ctrl.hideNavButtonFlag">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Sapient Block Chain</a>
+      </div>
+      <div id="appnavbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li  ng-repeat="menu in $ctrl.menuItems" ng-class="{'active': $ctrl.isActive(menu.name)}">
+	      	<a ng-link="[menu.name]"><span class="{{menu.icon}}"></span>{{menu.title}}</a>
+	      </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="!$ctrl.isAnonymous">
+			<li ><a>Welcome: <span class="glyphicon glyphicon-user"></span> {{$ctrl.loginInfo.fullName}}</a></li>
+			<li><a ng-click="$ctrl.logout($event)" href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+		</ul>
+	</div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+</nav>

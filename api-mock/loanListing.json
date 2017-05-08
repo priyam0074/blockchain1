@@ -1,0 +1,58 @@
+{
+  "columns": [
+      "id",
+      "loanAmount",
+      "useOfLoanProceeds",
+      "rateOfInterest ",
+      "libor",
+      "spread",
+      "status",
+      "creditLimit",
+      "outstanding",
+      "creditLineExcess",
+      "amountAvailableToBorrow",
+      "marginCallAmount",
+      "marginCallDueDate",
+      "marketValue",
+      "lendableValue",
+      "collateralValue"
+  ],
+  "data": [
+    {
+      "id": "01",
+      "loanAmount": "7522200",
+      "useOfLoanProceeds": "useOfLoanProceeds",
+      "rateOfInterest ": "rateOfInterest",
+      "libor": "libor",
+      "spread": "spread",
+      "status": "status",
+      "creditLimit": "creditLimit",
+      "outstanding": "outstanding",
+      "creditLineExcess": "creditLineExcess",
+      "amountAvailableToBorrow": "amountAvailableToBorrow",
+      "marginCallAmount": "marginCallAmount",
+      "marginCallDueDate": "marginCallDueDate",
+      "marketValue": "marketValue",
+      "lendableValue": "lendableValue",
+      "collateralValue": "collateralValue"
+    },
+    {
+      "id": "02",
+      "loanAmount": "7522200",
+      "useOfLoanProceeds": "useOfLoanProceeds",
+      "rateOfInterest ": "rateOfInterest",
+      "libor": "libor",
+      "spread": "spread",
+      "status": "status",
+      "creditLimit": "creditLimit",
+      "outstanding": "outstanding",
+      "creditLineExcess": "creditLineExcess",
+      "amountAvailableToBorrow": "amountAvailableToBorrow",
+      "marginCallAmount": "marginCallAmount",
+      "marginCallDueDate": "marginCallDueDate",
+      "marketValue": "marketValue",
+      "lendableValue": "lendableValue",
+      "collateralValue": "collateralValue"
+    }
+  ]
+}

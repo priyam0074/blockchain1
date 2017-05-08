@@ -1,0 +1,5 @@
+{
+    "lender" : "approve",
+    "financialadvisor" : "sendForConsent",
+    "borrower" : "acknowledge"
+}

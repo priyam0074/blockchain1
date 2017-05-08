@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-sm-3">
+        <account collateral-account-list="$ctrl.collateralAccountList" 
+	        security-section-enable="$ctrl.showSecuritySection()" 
+            remove-security-section="$ctrl.removeSecuritySection()" 
+	        show-position-flag="$ctrl.showPositionFlag" 
+            fetching-data-flag="$ctrl.fetchingDataFlag"
+            current-selected-account="$ctrl.currentSelectedAccount"
+		  	selected-account-list="$ctrl.selectedAccountList" loan="$ctrl.loan" is-calculate-collateral="$ctrl.isCalculateCollateral" is-input-controls="$ctrl.isInputControls" ></account>
+    </div>
+    <div class=" col-sm-9">
+        <security security-details="$ctrl.securityDetails" 
+        show-position-flag="$ctrl.showPositionFlag"
+        loan-approval-flag="$ctrl.loanApprovalFlag"
+         loan="$ctrl.loan" ></security>
+    </div>
+</div>

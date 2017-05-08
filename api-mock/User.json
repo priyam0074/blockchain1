@@ -1,0 +1,12 @@
+// get an instance of mongoose and mongoose.Schema
+{
+	"userName": "abc01",
+    "password": "12345",
+    "emailId": "abc@xyz.com",
+    "firstName": "Francis",
+    "lastName": "Whitmann",
+    "roles": ["lender"],	
+	"token": "ABX1234hkjhkFGGF5435",
+	"success":true,
+	"tokenExpiry":"2342354236"
+}

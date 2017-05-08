@@ -1,0 +1,59 @@
+{
+  "securityDetails": {
+    "columns": [
+      "LOAN ID",
+            "SECURITY NAME",
+            "CUSIP",
+            "QUANTITY",
+            "PRICE",
+            "MV",
+            "COLLATERAL VALUE"
+    ],
+    "data": [{
+			"id" : 11,  
+            "securityName":"Microsoft Corp",
+            "cusip":"6577",
+            "quantity":"123",
+            "price":"213",
+            "mv":"2133",
+            "collateralValue":"1212"
+            },
+            {
+			"id" : 18,  
+            "securityName":"Goldman Sachs",
+            "cusip":"6927",
+            "quantity":"323",
+            "price":"113",
+            "mv":"3533",
+            "collateralValue":"3452"
+            },
+            {
+			"id" : 32,  
+            "securityName":"Sony",
+            "cusip":"1233",
+            "quantity":"567",
+            "price":"454",
+            "mv":"5646",
+            "collateralValue":"8768"
+            },
+            {
+			"id" : 43,  
+            "securityName":"Apple Inc",
+            "cusip":"8762",
+            "quantity":"314",
+            "price":"342",
+            "mv":"7688",
+            "collateralValue":"7657"
+            },
+            {
+			"id" : 31,  
+            "securityName":"Google Inc",
+            "cusip":"32424",
+            "quantity":"43",
+            "price":"133",
+            "mv":"3453",
+            "collateralValue":"3434"
+            }
+    ]
+  }
+}

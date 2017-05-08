@@ -1,0 +1,25 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-cookies": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular-ui-bootstrap": "^2.1.4",
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0",
+    "lodash": "^4.16.4",
+    "ng-focus-if": "^1.0.7",
+    "ui-select": "^0.19.4"
+  }
+}

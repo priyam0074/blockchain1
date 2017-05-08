@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+            <div class="panel panel-primary">
+               <div class="panel-heading">
+                  <h3 class="panel-title">Loan Listing</h3>
+               </div>
+               <div class="panel-body app-panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Loan Number</th>
+                                    <th>Loan Status</th>
+                                    <th>Outstanding</th>
+                                    <th>Amt. Avl To Borrow</th>
+                                    <th>Margin Call Amt.</th>
+                                    <th>Margin Call Due Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="loan in $ctrl.loanList" ng-class="{'danger': (!loan.isActive && loan.status =='approved')}">
+                                    <td><a id="link-3" ng-click="$ctrl.navigateToLoanDetails(loan.id)">{{loan.id}}</a></td>
+                                    <td>{{loan.status}}</td>
+                                    <td>{{loan.outstanding}}</td>
+                                    <td>{{loan.amountAvailableToBorrow}}</td>
+                                    <td>{{loan.marginCallAmount}}</td>
+                                    <td>{{loan.marginCallDueDate}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+               </div>
+            </div>                     
+        </div>
+        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+            <div class="panel panel-primary">
+               <div class="panel-heading">
+                  <h3 class="panel-title">Lorem Ipsum</h3>
+               </div>
+               <div class="panel-body app-panel-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                  
+                </div>
+                   <div class="col-sm-6">
+                         <button class="btn btn-default" ng-click="$ctrl.addUser()">Add row</button>
+                   </div>
+              </div>
+            </br>
+            </br>
+            </br>
+            </br>
+            
+               <div class="row">
+                  <div class="col-sm-12" >
+                   <table  class= "table-bordered table-hover"  ng-if = "$ctrl.inserted !== undefined">
+                        <tr>
+                             <th style= "width:30px;"> select security</th>
+                             <th>{{$ctrl.heading.security}}</th>
+                             <th>{{$ctrl.heading.PRICE}}</th>
+                             <th>{{$ctrl.heading.NEW}}</th>
+                        </tr>
+                        <tr ng-repeat="v in $ctrl.filterSecId() track by $index" >
+                             <td ><select ng-model="$ctrl.selectedQuery" ng-options="state.id as state.security for state in $ctrl.lov_state" >
+                                        <option title="---Select Query---" value="">None</option>
+                                 </select>
+                             </td>
+                             <td>{{v.security}}</td>
+                             <td>{{v.PRICE}}</td>
+                             <td>
+                              {{v.NEWPRICE}}
+                               <!-- <span ng-hide="v.editing" ng-dblclick="$ctrl.editItem(v)">{{v.NEWPRICE}}</span>
+                                                             <input ng-show="v.editing" ng-model="v.NEWPRICE" ng-blur="$ctrl.doneEditing(v)" autofocus /> -->
+                             </td>
+                        </tr>
+                    </table>
+                     
+                  </div>
+                </div>
+                  </div>
+            </div>           
+        </div> 
+        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+            <div class="panel panel-primary">
+               <div class="panel-heading">
+                  <h3 class="panel-title">Lorem Ipsum</h3>
+               </div>
+               <div class="panel-body app-panel-body"></div>
+            </div>          
+        </div> 
+        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+            <div class="panel panel-primary">
+               <div class="panel-heading">
+                  <h3 class="panel-title">Lorem Ipsum</h3>
+               </div>
+               <div class="panel-body app-panel-body"></div>
+            </div>           
+        </div> 
+    </div>
+</div>
+
+
+
+

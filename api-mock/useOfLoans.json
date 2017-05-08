@@ -1,0 +1,18 @@
+{
+  "useOfLoanProceeds": [
+      {
+        "id": "1",
+        "name": "use of loan proceeds 1"
+      },
+      {
+        "id": "1",
+        "name": "use of loan proceeds 2"
+      },
+      {
+        "id": "1",
+        "name": "use of loan proceeds 3"
+      }
+
+  ]
+
+}

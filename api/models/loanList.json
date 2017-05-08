@@ -1,0 +1,228 @@
+{
+  "loanList": [{
+    "id": "2002",
+    "loanAmount": "200000",
+    "useOfLoanProceeds": {
+      "id": "3",
+      "name": "Reason 3 Value"
+    },
+    "rateOfInterest": "4.25%",
+    "spread": "Spread",
+    "status": "pendingApproval",
+    "collateralValue": 24523,
+    "collateralAccounts": [{
+      "id": "1",
+      "name": "Collateral Account 1"
+    }, {
+      "id": "2",
+      "name": "Collateral Account 2"
+    }, {
+      "id": "3",
+      "name": "Collateral Account 3"
+    }],
+    "collateralPositions": [{
+      "id": 11,
+      "securityName": "Microsoft Corp",
+      "cusip": "6577",
+      "quantity": "123",
+      "price": "213",
+      "mv": "2133",
+      "collateralValue": "2000"
+    }, {
+      "id": 18,
+      "securityName": "Goldman Sachs",
+      "cusip": "6927",
+      "quantity": "323",
+      "price": "113",
+      "mv": "3533",
+      "collateralValue": "1000"
+    }, {
+      "id": 32,
+      "securityName": "Sony",
+      "cusip": "1233",
+      "quantity": "567",
+      "price": "454",
+      "mv": "5646",
+      "collateralValue": "2000"
+    }, {
+      "id": 43,
+      "securityName": "Apple Inc",
+      "cusip": "8762",
+      "quantity": "314",
+      "price": "342",
+      "mv": "7688",
+      "collateralValue": "1000"
+    }, {
+      "id": 31,
+      "securityName": "Google Inc",
+      "cusip": "32424",
+      "quantity": "43",
+      "price": "133",
+      "mv": "3453",
+      "collateralValue": "1000"
+    }],
+    "borrower": {
+      "firstName": "Sumit",
+      "middleName": "Kumar",
+      "lastName": "Rajra",
+      "emailId": "kumar.sumit818@gmail.com",
+      "phone": "9599221553"
+    },
+    "custodian": {},
+    "broker": {},
+    "libor": "1 month Libor",
+    "creditLimit": "creditLimit",
+    "outstanding": "35000",
+    "creditLineExcess": "creditLineExcess",
+    "amountAvailableToBorrow": "25000",
+    "marginCallAmount": "0",
+    "marginCallDueDate": "NA",
+    "marketValue": "marketValue",
+    "lendableValue": "lendableValue",
+    "excess": "excess",
+    "deficit": "deficit",
+    "lenderName": "lenderName",
+    "lenderAddress": "street abc xyz"
+  }, {
+    "id": "LN0012",
+    "loanAmount": "258000",
+    "useOfLoanProceeds": {
+      "id": "2",
+      "name": "Reason 2 Value"
+    },
+    "rateOfInterest": "6.05%",
+    "spread": "Spread",
+    "status": "pendingAcknowledgement",
+    "collateralValue": 64825,
+    "collateralAccounts": [{
+      "id": "1",
+      "name": "Collateral Account 1"
+    }, {
+      "id": "4",
+      "name": "Collateral Account 4"
+    }],
+    "collateralPositions": [{
+      "id": 11,
+      "securityName": "Infosys Corp",
+      "cusip": "5632",
+      "quantity": "800",
+      "price": "512",
+      "mv": "2187",
+      "collateralValue": "80000"
+    }, {
+      "id": 18,
+      "securityName": "Goldman Sachs",
+      "cusip": "6927",
+      "quantity": "323",
+      "price": "113",
+      "mv": "3533",
+      "collateralValue": "1000"
+    }, {
+      "id": 32,
+      "securityName": "HCL",
+      "cusip": "1280",
+      "quantity": "127",
+      "price": "994",
+      "mv": "5896",
+      "collateralValue": "6000"
+    }],
+    "borrower": {
+      "firstName": "Hitesh",
+      "middleName": "Kumar",
+      "lastName": "Batra",
+      "emailId": "bathit@gmail.com",
+      "phone": "8765432128"
+    },
+    "custodian": {},
+    "broker": {},
+    "libor": "1 month Libor",
+    "creditLimit": "creditLimit",
+    "outstanding": "21000",
+    "creditLineExcess": "creditLineExcess",
+    "amountAvailableToBorrow": "8000",
+    "marginCallAmount": "NA",
+    "marginCallDueDate": "NA",
+    "marketValue": "marketValue",
+    "lendableValue": "lendableValue",
+    "excess": "excess",
+    "deficit": "deficit",
+    "lenderName": "lenderName",
+    "lenderAddress": "street abc xyz"
+  }, {
+    "id": "LN0013",
+    "loanAmount": "840000",
+    "useOfLoanProceeds": {
+      "id": "3",
+      "name": "Reason 3 Value"
+    },
+    "rateOfInterest": "3.89%",
+    "spread": "Spread",
+    "status": "approved",
+    "collateralValue": 74923,
+    "collateralAccounts": [{
+      "id": "5",
+      "name": "Collateral Account 5"
+    }, {
+      "id": "6",
+      "name": "Collateral Account 6"
+    }, {
+      "id": "7",
+      "name": "Collateral Account 7"
+    }],
+    "collateralPositions": [{
+      "id": 11,
+      "securityName": "IBM Corp",
+      "cusip": "1277",
+      "quantity": "987",
+      "price": "1000",
+      "mv": "6772",
+      "collateralValue": "78000"
+    }, {
+      "id": 32,
+      "securityName": "Lenovo",
+      "cusip": "6287",
+      "quantity": "123",
+      "price": "918",
+      "mv": "9898",
+      "collateralValue": "12000"
+    }, {
+      "id": 43,
+      "securityName": "Apple Inc",
+      "cusip": "8762",
+      "quantity": "314",
+      "price": "342",
+      "mv": "7688",
+      "collateralValue": "1000"
+    }, {
+      "id": 31,
+      "securityName": "Google Inc",
+      "cusip": "32424",
+      "quantity": "43",
+      "price": "133",
+      "mv": "3453",
+      "collateralValue": "1000"
+    }],
+    "borrower": {
+      "firstName": "Rajdeep",
+      "middleName": "Singh",
+      "lastName": "Gulati",
+      "emailId": "rk@gmail.com",
+      "phone": "6789098765"
+    },
+    "custodian": {},
+    "broker": {},
+    "libor": "1 month Libor",
+    "creditLimit": "creditLimit",
+    "outstanding": "68000",
+    "creditLineExcess": "creditLineExcess",
+    "amountAvailableToBorrow": "35000",
+    "marginCallAmount": "0",
+    "marginCallDueDate": "NA",
+    "marketValue": "marketValue",
+    "lendableValue": "lendableValue",
+    "excess": "excess",
+    "deficit": "deficit",
+    "lenderName": "lenderName",
+    "lenderAddress": "street abc xyz"
+  }]
+}

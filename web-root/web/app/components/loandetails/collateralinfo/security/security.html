@@ -1,0 +1,68 @@
+<div>
+    <h4 class="text-center">
+        <strong>Collateral Positions</strong>
+    </h4>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped" ng-if="!$ctrl.showPositionFlag">
+            <thead>
+                <tr>
+                    <th class="position-header" ng-repeat="securityDetails in $ctrl.positionColumns">{{securityDetails}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="7">
+                        <div class="alert-info text-center no-position-alert">
+                            <h4>Please select collateral account and click on <b>"Generate Collateral Value"</b> button</h4>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered table-striped text-center " ng-if="$ctrl.showPositionFlag">
+            <thead>
+                <tr>
+                    <th class="position-header" ng-repeat="securityDetails in $ctrl.securityDetails.columns">{{securityDetails}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat=" securityList in $ctrl.securityDetails.data">
+                    <td ng-repeat="(key, value) in securityList" ng-show="key != 'collateralAccountId'">{{securityList[key]}}</td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="info"><b>TOTALS</b></td>
+                    <td class="info"><b>$<span ng-bind="$ctrl.loan.collateralValue"></span></b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" ng-if="$ctrl.showPositionFlag">
+        <div class="col-sm-4">
+            <div class="form-group ">
+                <label for="loanAmount ">Loan Notional Amount</label>
+                <div>
+                    <span class="input-group-addon">$</span>
+                    <input type="text " class="form-control " id="loanAmount " ng-model="$ctrl.loan.loanAmount" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group ">
+                <label for="collateralValue ">Collateral Value</label>
+                <div>
+                    <span class="input-group-addon">$</span>
+                    <input type="text " class="form-control " id="collateralValue" ng-model="$ctrl.loan.collateralValue" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group ">
+                <label for="loanAmount ">Collateral Sufficient to Approve</label>
+                <div class="row text-center">
+                    <span><i class="fa fa-check fa-2x" ng-if="$ctrl.loanApprovalFlag" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-times fa-2x" ng-if="!$ctrl.loanApprovalFlag" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

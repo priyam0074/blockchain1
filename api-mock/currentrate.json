@@ -1,0 +1,7 @@
+{
+    "rate" :  "4.25%",
+    "Description" :  {
+        "libor" :  "1 month Libor",
+        " Spread" :  "spread"
+    }
+}

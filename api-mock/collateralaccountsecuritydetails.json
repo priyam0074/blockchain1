@@ -1,0 +1,37 @@
+{
+  "securityDetails": {
+    "columns": ["id", "securityName", "cusip", "quantity", "price", "mv", "collateralValue"],
+    "data":
+      [{
+            "id": "01",
+            "securityName": "Microsoft corp",
+            "cusip": "23123",
+            "quantity": "100",
+            "price": "33",
+            "mv": "3300",
+            "collateralValue": "2310"
+        }, {
+            "id": "02",
+            "securityName": "Apple corp",
+            "cusip": "23123",
+            "quantity": "100",
+            "price": "33",
+            "mv": "3300",
+            "collateralValue": "2310"
+        },{
+            "id": "02",
+            "securityName": "Sony",
+            "cusip": "23123",
+            "quantity": "100",
+            "price": "33",
+            "mv": "3300",
+            "collateralValue": "2310"
+        }
+      ]
+    }
+}
+
+
+
+
+     

@@ -1,0 +1,47 @@
+{
+  
+  "collateralAccounts": [
+    {
+      "id": "201",
+      "name" : "Srivastav"
+    },
+    {
+      
+      "id": "202",
+      "name" : "Collateral Account 2"
+    }
+    ,
+    {
+      "id": "3",
+      "name" : "Collateral Account 3"
+    },
+    {
+      "id": "4",
+      "name" : "Collateral Account 4"
+    },
+    {
+      "id": "5",
+      "name" : "Collateral Account 5"
+    },
+    {
+      "id": "6",
+      "name" : "Collateral Account 6"
+    },
+    {
+      "id": "7",
+      "name" : "Collateral Account 7"
+    },
+    {
+      "id": "8",
+      "name" : "Collateral Account 8"
+    },
+    {
+      "id": "9",
+      "name" : "Collateral Account 9"
+    },
+    {
+      "id": "10",
+      "name" : "Collateral Account 10"
+    }
+  ]
+}
